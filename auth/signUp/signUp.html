@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+</head>
+<link rel="stylesheet" href="signUp.css">
+
+<body>
+
+    <form action="post" onsubmit="signUp()">
+        <input type="text" id="firstName" placeholder="first name" />
+        <br />
+        <input type="text" id="lastName" placeholder="last name" />
+        <br />
+
+        <input type="text" id="email" placeholder="email" />
+        <br />
+        <input type="password" id="password" placeholder="password" />
+        <br />
+
+        <button onclick="signUp()">Sign Up</button>
+        <p>Already have an account?</p>
+        <button onclick="goToLoginPage()">Login</button>
+
+
+    </form>
+
+
+
+
+
+    <script src="signUp.js"></script>
+</body>
+
+</html>
