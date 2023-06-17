@@ -9,15 +9,23 @@
 </head>
 
 <body>
-    <input type="text" id="email" placeholder="email" />
+
+    <h1>Login Page</h1>
     <br />
-    <input type="password" id="password" placeholder="password" />
     <br />
 
-    <button onclick="signUp()">Login</button>
-    <p>Don't have an account?</p>
+
+
+    <form action="post" onsubmit="login()">
+        <input type="text" id="email" placeholder="email" />
+        <br />
+        <input type="password" id="password" placeholder="password" />
+        <br />
+
+        <button onclick="login()">Login</button>
+        <p>Don't have an account?</p>
+    </form>
     <button onclick="goToSignUpPage()">Sign Up</button>
-
 
 
 
