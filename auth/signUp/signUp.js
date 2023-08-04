@@ -16,17 +16,32 @@ function goToLoginPage() {
 
 function signUp() {
     event.preventDefault()
+    let radios = document.getElementsByName('gender')
+    let gender = "";
 
-    userAccounts.push({ "firstName": firstName.value, "lastName": lastName.value, "email": email.value, "password": password.value })
+    for (var i = 0; i < radios.length; i++) {
+        if (radios[i].checked) {
+            gender = radios[i].value
+        }
+    }
+    if (gender === "") {
+        alert("please select your gender")
+    }
+    else {
+        userAccounts.push({ "firstName": firstName.value, "lastName": lastName.value, "email": email.value, "password": password.value, gender: gender })
 
-    localStorage.setItem('userAccounts', JSON.stringify(userAccounts))
-    localStorage.setItem('loggedInUser', JSON.stringify({ "email": email.value, "password": password.value }))
+        localStorage.setItem('usersPostAppAccounts', JSON.stringify(userAccounts))
+        localStorage.setItem('loggedInUser', JSON.stringify({ "email": email.value, "password": password.value }))
 
-    window.location.replace('../../posts/posts.html')
+        window.location.replace('../../posts/posts.html')
+
+    }
+
+
 }
 
-if (localStorage.getItem('userAccounts') != null) {
-    userAccounts = JSON.parse(localStorage.getItem('userAccounts'))
+if (localStorage.getItem('usersPostAppAccounts') != null) {
+    userAccounts = JSON.parse(localStorage.getItem('usersPostAppAccounts'))
 
     console.log(JSON.parse(localStorage.getItem('loggedInUser')))
 }

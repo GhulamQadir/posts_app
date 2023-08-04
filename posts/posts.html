@@ -5,12 +5,184 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Posts</title>
+    <link rel="stylesheet" href="posts.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
 
-    <h1>Posts page</h1>
 
+
+
+    <div id="createPostPopup" class="createPostDiv">
+        <div class="postUpperDiv">
+            <p class="createPostHeading">Create Post</p>
+            <button class="closeBtn" onclick="closeDiv()"><i class="fa fa-times" aria-hidden="true"></i></button>
+        </div>
+        <hr>
+        <div id="createPostMainDiv">
+            <img id="profileInCreatePostDiv" class="userProfile" src="" alt=""><span id="userNameInPostDiv"></span>
+            <br>
+            <div id="postAreaDiv">
+                <div id="postDivTesting">
+                    <textarea class="writePostInputtt" type="text" id="writePostInput" autofocus="true"></textarea>
+                    <img src="" id="locationMapImg">
+                </div>
+                <br>
+
+                <div id="colorPickerDiv">
+                    <img onclick="showColorOptions()" id="colorPickerIcon" src="../icons/color-wheel.png" alt="">
+
+                    <div id="selectColorsDiv">
+                        <div id='closeColorPicker' onclick="hideColorPicker()" class='colors'><i
+                                class='fa fa-chevron-left' aria-hidden='true'></i>
+                        </div>
+                        <div onclick='thisBackgroundColor(this)' class='colors red' id='red'></div>
+                        <div onclick='thisBackgroundColor(this)' class='colors blue' id='blue'></div>
+                        <div onclick='thisBackgroundColor(this)' class='colors purple' id='purple'></div>
+                        <div onclick='thisBackgroundColor(this)' class='colors green' id='green'></div>
+                        <div onclick='thisBackgroundColor(this)' class='colors orange' id='orange'></div>
+                        <div onclick='thisBackgroundColor(this)' class='colors #383060' id='shadedC1'></div>
+                        <div onclick='thisBackgroundColor(this)' class='colors #f763eb' id='pink'></div>
+                        <div onclick='thisBackgroundColor(this)' class='colors #39d4ba' id='seaGreen'></div>
+                        <div onclick='thisBackgroundColor(this)' class='colors #b0717c' id='shadedC2'></div>
+                        <div onclick='thisBackgroundColor(this)' class='colors brown' id='brown'></div>
+                    </div>
+                </div>
+                <i class="fa fa-smile-o pickEmoji" aria-hidden="true"></i>
+            </div>
+        </div>
+
+        <div id="createPostlowerDiv">
+            <div id="addToYourPostDiv">
+                <p id="addToYourPostHeading">Add to your post</p>
+                <button onclick="pickLocation()" id="pickLocationBtn" class="addToPostButtons">
+                    <span class="pickLocationBtnText">Check in</span>
+                    <i class="fa fa-map-marker" aria-hidden="true"></i></button>
+                <button onclick="showFeelingDiv()" id="feelingBtn" class="addToPostButtons">
+                    <span class="feelingBtnText">Feeling/activity</span>
+                    <i class="fa fa-smile-o feelingEmoji" aria-hidden="true"></i></button>
+            </div>
+            <div id="postBtnDiv">
+                <button onclick="addPost()" class="postButton">Post</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="feelingDivPopUp" class="feelingDiv">
+        <div id="feelingUpperDiv">
+            <button class="backToPostDivBtn" onclick="backToPostDiv()">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            </button>
+            <p class="feelingHeadingText">How are you feeling</p>
+        </div>
+        <hr>
+
+        <div id="pickFeelingMainDiv">
+            <p class="feelingsHeading">Feelings</p>
+            <input type="text" class="searchFeelingInput" placeholder="Search">
+            <div id="pickFeelingsDiv">
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Navbar -->
+    <nav id="my_nav" class="navbar navbar-expand-lg">
+        <a class="navbar-brand appName" href="#">
+            <span>Crunch Posty</span>
+        </a>
+        <button id="nav_toggle_btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span><i class="fa fa-bars" aria-hidden="true"></i> </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+                <input id="search_todo" class="form-control mr-sm-2" type="search" placeholder="Search post "
+                    onkeyup="searchTodo()" aria-label="Search">
+            </ul>
+
+            <ul class="navbar-nav mr-auto">
+                <i class="fa fa-heart" aria-hidden="true"></i>
+            </ul>
+            <div class="dropdown show">
+                <img id="user_profile_dropdown" class="userProfile" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false" src="" alt="" />
+                <div class="dropdown-menu dropdown-menu-right">
+                    <div id="user_dropdown_img">
+                        <img id="user_profile_img" class="userProfile" src="" alt="">
+                    </div>
+                    <div id="user_name">
+                        <p id="hello_user">Hello,<br></p>
+                        <p id="profile_userName"></p>
+                    </div>
+
+                    <div class="features">
+                        <span><i class="fa fa-envelope email_icon" aria-hidden="true"></i></span>
+                        <span id="user_email"></span>
+                    </div>
+                    <hr>
+
+                    <div class="features">
+                        <a id="my_todos_link" href="#todos_div"><span><i class="fa fa-check icons"
+                                    aria-hidden="true"></i></span>
+                            <span class="features_names">My Todos</span></a>
+                    </div>
+                    <div class="features">
+                        <p onclick="addTodoDropdown()"><span><i class="fa fa-plus icons" aria-hidden="true"></i> </span>
+                            <span class="features_names">Add Todo</span>
+                        </p>
+                    </div>
+                    <hr>
+
+                    <div class="features">
+                        <p onclick="logOut()"><span><i class="fa fa-sign-out icons" aria-hidden="true"></i></span>
+                            <span class="features_names">Logout</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navbar Logout Button -->
+            <button type="button" class="btn btn-outline-danger nav_logut_Btn" onclick="logOut()"><span
+                    style="font-weight: bold;">Logout</span></button>
+
+
+            <ul>
+        </div>
+    </nav>
+
+
+    <div id="mainDiv">
+        <div onclick="openCreatePostDiv()" class="whatsInMindDiv">
+            <img id="user_profile_In_mind" class="userProfile" src="" alt="">
+            <input type="text" id="whatsInMindInput" disabled />
+            <hr>
+        </div>
+
+        <div id="usersPostsDiv">
+
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.4/moment.min.js"></script>
+    <script src="posts.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -1,0 +1,742 @@
+.createPostDiv {
+    display: none;
+    opacity: 0;
+    -webkit-animation: slide-down 1s ease-out;
+    position: absolute;
+    left: 30%;
+    top: 17%;
+    width: 10%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: rgb(255, 255, 255);
+    height: 463px;
+    border-radius: 10px;
+    /* overflow-y: auto; */
+}
+
+.createPostDiv.open {
+    margin: auto;
+    width: 35%;
+    display: block;
+    opacity: 1 !important;
+    -webkit-animation: slide-down 0.3s ease-out;
+}
+
+
+/* nzsdhfasjkfhsdkfjsdlfjsfjszfksdflsdkfsdfs */
+
+.feelingDiv {
+    display: none;
+    opacity: 0;
+    -webkit-animation: slide-down 1s ease-out;
+    position: absolute;
+    left: 30%;
+    top: 17%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: rgb(255, 255, 255);
+    height: 450px;
+    border-radius: 10px;
+    padding: 10px 5px 5px 5px;
+    /* display: flex;
+    flex-direction: column;
+    overflow: hidden; */
+    /* overflow-y: auto; */
+
+}
+
+.feelingDiv.openFeelingDiv {
+    margin: auto;
+    width: 32%;
+    display: block;
+    opacity: 1 !important;
+    -webkit-animation: slide-down 0.3s ease-out;
+}
+
+#feelingUpperDiv {
+    text-align: center;
+    padding: 10px 5px 5px 5px;
+}
+
+.backToPostDivBtn {
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    padding: 5px 15px 5px 15px;
+    float: left;
+}
+
+
+.backToPostDivBtn:hover {
+    background-color: lightgrey;
+}
+
+
+.feelingHeadingText {
+    display: inline;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#pickFeelingMainDiv {
+    padding: 0px 6px 10px 0px;
+    /* overflow-y: auto; */
+}
+
+.feelingsHeading {
+    color: purple;
+    font-size: 19px;
+    font-weight: 500;
+    text-decoration: underline;
+    margin-left: 15px;
+    text-decoration-thickness: 3px;
+}
+
+.searchFeelingInput {
+    border-radius: 15px;
+    width: 97%;
+    border: none;
+    background-color: rgb(218, 218, 218);
+    height: 34px;
+    margin-left: 13px;
+    margin-bottom: 20px;
+    padding: 5px 5px 5px 10px;
+}
+
+
+#pickFeelingsDiv {
+    text-align: center;
+    height: 260px;
+    overflow-y: auto;
+}
+
+.feelingsBtns {
+    width: 47%;
+    margin: 2px 5px 5px 2px;
+    text-align: start;
+    border: none;
+    background: none;
+    padding: 9px 5px 13px 5px;
+    border-radius: 7px;
+}
+
+.feelingsBtns:hover {
+    background-color: rgb(197, 196, 196);
+}
+
+.feelingBtnEmoji {
+    font-size: 18px;
+    border-radius: 20px;
+    background-color: rgb(218, 218, 218);
+    padding: 6px;
+    margin-right: 10px;
+}
+
+
+
+/* djfhksdfhfskdfhdsfjsdkfhsdfs */
+
+
+.postUpperDiv {
+    padding: 10px 5px 5px 5px;
+    text-align: center;
+}
+
+
+.createPostHeading {
+    font-size: 22px;
+    font-weight: 600;
+    display: inline;
+}
+
+
+#profileInCreatePostDiv {
+    height: 40px;
+    display: inline;
+}
+
+#userNameInPostDiv {
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(106, 106, 106);
+}
+
+.closeBtn {
+    float: right;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    padding: 5px 15px 5px 15px;
+}
+
+.closeBtn:hover {
+    background-color: lightgrey;
+}
+
+
+#postAreaDiv {
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+#postDivTesting {
+    height: 150px;
+}
+
+.writePostInputtt {
+    width: 95%;
+    outline: none;
+    border: none;
+    height: 145px;
+    font-size: 21px;
+    margin-top: 10px;
+    margin-left: 5px;
+    color: grey;
+    font-weight: 500;
+}
+
+.writePostInputtt::placeholder {
+    color: lightslategray;
+}
+
+.textAreaStyleForColor {
+    text-align: center;
+    color: white;
+}
+
+.textAreaStyleForColor::placeholder {
+    color: white;
+}
+
+
+#colorPickerDiv {
+    display: inline-block;
+    padding-top: 7px;
+    padding-left: 10px;
+}
+
+#colorPickerIcon {
+    height: 30px;
+    cursor: pointer;
+    padding-right: 10px;
+}
+
+#selectColorsDiv {
+    display: none;
+    cursor: pointer
+}
+
+.colors {
+    display: inline;
+    padding: 4px 17px 4px 17px;
+    border-radius: 5px;
+    margin-right: 7px;
+}
+
+.selectedColorForPost {
+    border: 1.5px solid white;
+}
+
+#closeColorPicker {
+    background-color: rgb(228, 233, 237);
+}
+
+#red {
+    background-color: red;
+}
+
+#blue {
+    background-color: rgb(29, 29, 239);
+}
+
+#green {
+    background-color: rgb(28, 164, 28);
+}
+
+#purple {
+    background-color: purple;
+}
+
+#orange {
+    background-color: orange;
+}
+
+#shadedC1 {
+    background-color: #383060;
+}
+
+#brown {
+    background-color: brown;
+}
+
+#pink {
+    background-color: #f763eb;
+}
+
+#seaGreen {
+    background-color: #39d4ba;
+}
+
+#shadedC2 {
+    background-color: #b0717c;
+}
+
+
+.pickEmoji {
+    float: right;
+    padding: 7px 20px 5px 5px;
+    font-size: 30px !important;
+    color: rgb(168, 167, 167);
+}
+
+.pickEmoji:hover {
+    color: grey;
+}
+
+#addToYourPostDiv {
+    border: 1px solid rgb(197, 195, 195);
+    border-radius: 10px;
+    margin: 15px 15px 10px 15px;
+    padding: 10px 13px 10px 12px;
+}
+
+#addToYourPostHeading {
+    color: slategrey;
+    display: inline;
+}
+
+.feelingEmoji {
+    font-size: 27px !important;
+    color: rgb(216, 216, 18);
+}
+
+.feelingEmoji:hover {
+    text-shadow: 0 0 12px rgb(192, 186, 186)
+}
+
+.fa-map-marker {
+    color: rgb(228, 18, 18);
+    font-size: 27px !important;
+    font-weight: bold;
+}
+
+.fa-map-marker:hover {
+    text-shadow: 0 0 12px rgb(147, 143, 143)
+}
+
+
+#feelingBtn,
+#pickLocationBtn {
+    position: relative;
+    float: right;
+    width: 45px;
+    background: none;
+    border: none;
+}
+
+#feelingBtn .feelingBtnText,
+#pickLocationBtn .pickLocationBtnText {
+    visibility: hidden;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 6px 5px 6px 5px;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    /* width: 120px; */
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+    font-size: 14px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#feelingBtn:hover .feelingBtnText,
+#pickLocationBtn:hover .pickLocationBtnText {
+    visibility: visible;
+}
+
+
+
+
+#postBtnDiv {
+    text-align: center;
+    margin-top: 13px;
+}
+
+.postButton {
+    width: 93%;
+    border-radius: 6px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    background-color: purple;
+    border: none;
+}
+
+
+@-webkit-keyframes slide-down {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(10%);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translate3d(0);
+    }
+}
+
+
+
+
+
+/* Navbar styling */
+#my_nav {
+    padding: 7px 40px 7px 40px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 7px;
+}
+
+.appName {
+    font-size: 37px !important;
+    font-weight: bold;
+    color: rgb(74, 32, 74);
+    text-shadow: 0 0 10px rgb(166, 166, 166);
+    font-family: sans-serif
+}
+
+/* .appName:hover {
+    color: black;
+} */
+
+/* Navbar logout button */
+.nav_logut_Btn {
+    margin-left: 17px !important;
+    padding: 5px 15px 5px 15px !important;
+}
+
+/* Navbar User Profile dropdown Styling  */
+#user_profile_dropdown,
+#user_profile_img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: 0px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    width: 300px !important;
+    height: 285px !important;
+    background-color: whitesmoke;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 4px 15px 0 rgba(0, 0, 0, 0.19);
+}
+
+#user_dropdown_img {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 12px;
+    margin-left: 5px;
+}
+
+#user_name {
+    display: inline-block;
+    margin-top: 9px;
+}
+
+.fa-heart {
+    color: rgb(59, 16, 99);
+    font-size: 25px !important;
+}
+
+#hello_user {
+    margin-bottom: 1px;
+    font-size: 14px;
+    color: rgb(114, 112, 112);
+}
+
+#profile_userName {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.features {
+    margin: 5px 5px 15px 15px;
+}
+
+.icons {
+    font-size: 17px !important;
+    padding-right: 7px;
+    color: rgb(6, 49, 6);
+    cursor: pointer;
+}
+
+.email_icon {
+    color: grey !important;
+    font-size: 13px !important;
+}
+
+#user_email {
+    color: grey;
+    font-size: 15px;
+    margin-left: 3px;
+}
+
+.features_names {
+    color: rgb(3, 29, 3);
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#my_todos_link {
+    text-decoration: none;
+}
+
+/*  Navbar dropdown Styling End */
+
+
+/* Navbar Search Todo styling */
+#search_todo {
+    width: 750px !important;
+    margin-left: 80px;
+}
+
+@media screen and (max-width: 1250px) {
+    #search_todo {
+        width: 600px !important;
+    }
+
+    #todo_field {
+        width: 700px !important;
+    }
+
+}
+
+@media screen and (max-width: 1160px) {
+    #search_todo {
+        width: 500px !important;
+        margin-left: 20px;
+    }
+
+
+}
+
+@media screen and (max-width: 992px) {
+    #search_todo {
+        width: 100% !important;
+        margin-left: 0px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    /* user profile dropdown responsivness */
+    #user_profile_dropdown {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-left: 0px;
+        cursor: pointer;
+    }
+
+    /* nav logout button responsiveness */
+    .nav_logut_Btn {
+        margin-left: 0px !important;
+        padding: 5px 15px 5px 15px !important;
+        font-weight: bold !important;
+    }
+
+}
+
+.fa-bars {
+    color: white;
+    font-size: 25px !important;
+}
+
+/* Navbar Search Todo styling End*/
+
+
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+
+.whatsInMindDiv {
+    width: 45%;
+    margin: auto;
+    color: black;
+    margin-top: 60px;
+    padding: 7px 5px 7px 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 6px;
+    margin-bottom: 30px;
+}
+
+#user_profile_In_mind {
+    width: 50px;
+    height: 50px;
+    border-radius: 45%;
+    margin: 5px 0px 0px 5px;
+    cursor: pointer;
+}
+
+#whatsInMindInput {
+    width: 85%;
+    border-radius: 20px;
+    height: 40px;
+    border: 1px solid;
+    background-color: rgb(243, 243, 243);
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid rgb(243, 243, 243);
+}
+
+#whatsInMindInput:hover {
+    background-color: rgb(231, 230, 230);
+}
+
+
+
+#usersPostsDiv {
+    text-align: center;
+}
+
+.postDiv {
+    /* height: 400px; */
+    width: 33%;
+    margin: auto;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 9px;
+    border-radius: 7px;
+    margin-bottom: 19px;
+    padding: 0;
+}
+
+.postUpperDiv {
+    padding-top: 15px;
+    padding-left: 10px;
+}
+
+.userAvatarInPost {
+    height: 40px;
+    display: inline;
+    float: left;
+    border-radius: 45%;
+    cursor: pointer;
+    padding: 2px;
+    margin-right: 9px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 9px;
+}
+
+.userNameInPost {
+    float: left;
+    font-size: 16px;
+    text-align: start;
+    line-height: 0px;
+    padding-top: 9px;
+    margin: 0;
+    font-weight: 500;
+}
+
+.timeOfPost {
+    float: left;
+    text-align: start;
+    font-size: 11.5px;
+    padding-top: 3px;
+    line-height: 0px;
+    color: rgb(172, 170, 170);
+}
+
+.postMainDiv {
+    margin-top: 35px;
+    padding: 5px;
+    min-height: 190px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    border-top: 0.2px solid rgb(204, 202, 202);
+}
+
+.postContent {
+    font-size: 20px;
+
+}
+
+.postFooterDiv {
+    margin-top: 10px;
+    border-top: 0.2px solid rgb(204, 202, 202);
+}
+
+.footerBtns {
+    width: 27%;
+    margin: 10px 7px 5px 7px;
+    background: none;
+    border: none;
+}
+
+.footerBtns:hover {
+    background-color: rgb(233, 233, 233);
+}
+
+.footerBtnIcons {
+    padding-right: 10px;
+    font-weight: bold !important;
+    font-size: 17px !important;
+    color: grey;
+}
+
+.footerBtnText {
+    font-size: 15px;
+    font-weight: 700;
+    color: rgb(93, 92, 92);
+}
+
+
+/* LOADER */
+/*             LOADER STYLING              */
+#loader {
+    /* position: relative; */
+    transform: translate(0, -50%);
+    position: absolute;
+    border: 4px solid rgb(205, 202, 202);
+    border-radius: 50%;
+    border-top: 4px solid slateblue;
+    right: 30px;
+    width: 25px;
+    height: 25px;
+    -webkit-animation: spin 2s linear infinite;
+    /* Safari */
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+    animation: spin 2s linear infinite;
+    display: inline;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
